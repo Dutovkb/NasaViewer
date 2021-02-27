@@ -1,0 +1,6 @@
+framework module Pods_NasaViewer {
+  umbrella header "Pods-NasaViewer-umbrella.h"
+
+  export *
+  module * { export * }
+}
