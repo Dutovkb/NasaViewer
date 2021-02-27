@@ -39,7 +39,7 @@ class DetailTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         setShadowForImageView()
         
         receiveDataForTitle()
@@ -115,7 +115,9 @@ class DetailTableViewController: UIViewController {
     }
     
     func receiveDataForDescription() {
-        guard let detailDescriptionTextView = detailDescriptionTextView else {return}
+        guard let detailDescriptionTextView = detailDescriptionTextView else { print("detailDescriptionTextView failed guard verification")
+            return
+        }
         
         if textViewText == "" {
             detailDescriptionTextView.text = "Description for the photo is not provided by the photographer."
@@ -125,7 +127,10 @@ class DetailTableViewController: UIViewController {
     }
     
     func receiveDataForLocation() {
-        guard let detailLocationLabel = detailLocationLabel else {return}
+        guard let detailLocationLabel = detailLocationLabel else {
+            print("detailLocationLabel failed guard verification")
+            return
+        }
         
         if locationText == "" {
             detailLocationLabel.text = "Location: n/a"
@@ -135,7 +140,11 @@ class DetailTableViewController: UIViewController {
     }
     
     func receiveDataForCenter() {
-        guard let centerTextLabel = centerTextLabel else { return }
+        guard let centerTextLabel = centerTextLabel else {
+            print("centerTextLabel failed guard verification")
+            return
+        }
+        
         if centerText == "" {
             centerTextLabel.text = "Center: n/a"
         } else {
@@ -144,7 +153,10 @@ class DetailTableViewController: UIViewController {
     }
     
     func receiveDataForKeywords() {
-        guard let keywordsTextLabel = keywordsTextLabel else {return}
+        guard let keywordsTextLabel = keywordsTextLabel else {
+            print("keywordsTextLabel failed guard verification")
+            return
+        }
         
         if keywordsTextArray == [""] {
             keywordsTextLabel.text = "Keywords: n/a"

@@ -112,11 +112,13 @@ class MainTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Please enter your search words"
+        
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
     
     fileprivate func setSearchBar() {
+        
         searchController.searchBar.scopeButtonTitles = ["All", "Titles", "Keywords", "Center"]
         searchController.searchBar.delegate = self
     }
